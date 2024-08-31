@@ -1,0 +1,32 @@
+apps:
+  - name: "tenant-sync"
+    replicaCount: 1
+    dockerImage: "hello-world"
+
+    service:
+      type: ClusterIP
+      port: 80
+
+  - name: "tenant-bkp"
+    replicaCount: 1
+    dockerImage: "hello-world"
+
+    service:
+      type: ClusterIP
+      port: 80
+
+  - name: "tenant-health"
+    replicaCount: 1
+    dockerImage: "hello-world"
+
+    service:
+      type: ClusterIP
+      port: 80
+
+  - name: "tenant-hello"
+    replicaCount: 1
+    dockerImage: "hello-world"
+
+    service:
+      type: ClusterIP
+      port: 80               

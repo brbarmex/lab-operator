@@ -1,0 +1,18 @@
+apiVersion: webapp.brbarmex/v1
+kind: DeployTenant
+metadata:
+  labels:
+    app.kubernetes.io/name: deploy-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: deploytenant-crd-sample
+spec:
+  chartName: brbarmex-tenant/tenants
+  releaseVersion: v1.0.0
+  releaseName: brbarmex-test
+  tenants:
+    - "sample-1"
+    - "sample-2"
+    - "sample-3"
+  args:
+    - "app-install"
+  # TODO(user): Add fields here

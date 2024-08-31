@@ -1,0 +1,27 @@
+# permissions for end users to edit deploytenants.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: deploy-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: deploytenant-editor-role
+rules:
+- apiGroups:
+  - webapp.brbarmex
+  resources:
+  - deploytenants
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - webapp.brbarmex
+  resources:
+  - deploytenants/status
+  verbs:
+  - get
