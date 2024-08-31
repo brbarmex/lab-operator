@@ -73,7 +73,9 @@ Following are the steps to build the installer and distribute this project to us
 1. Build the installer for the image built and published in the registry:
 
 ```sh
-make build-installer IMG=<some-registry>/deploy-operator:tag
+make build-installer IMG=brbarmex/deploy-operator:latest
+make docker-build docker-push IMG=brbarmex/deploy-operator:latest
+
 ```
 
 NOTE: The makefile target mentioned above generates an 'install.yaml'

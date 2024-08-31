@@ -10,9 +10,9 @@ spec:
   releaseVersion: v1.0.0
   releaseName: brbarmex-test
   tenants:
-    - "sample-1"
-    - "sample-2"
-    - "sample-3"
+    - "megabrux-store"
+    - "crisshoes-store"
+    - "kalleb-store"
   args:
     - "app-install"
   # TODO(user): Add fields here
